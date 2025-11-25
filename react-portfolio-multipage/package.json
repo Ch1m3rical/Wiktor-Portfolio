@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist -r https://github.com/Ch1m3rical/Wiktor-Portfolio.git"
   },
   "dependencies": {
     "react": "^18.2.0",
