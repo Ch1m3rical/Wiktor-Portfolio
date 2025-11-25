@@ -6,8 +6,15 @@ import {
 
 const OG_IMAGE_BASE_URL = "https://opengraph.githubassets.com/1";
 
+function withBasePath(path = "") {
+  const normalized = path.startsWith("/") ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${normalized}`;
+}
+
 function getCuratedImagePath(repoName) {
-  return `/project-images/${encodeURIComponent(repoName)}.jpg`;
+  return withBasePath(
+    `project-images/${encodeURIComponent(repoName)}.jpg`
+  );
 }
 
 function getOgPreviewUrl(repo) {

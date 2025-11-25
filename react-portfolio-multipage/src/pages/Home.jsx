@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const portraitSrc = useMemo(
+    () => `${import.meta.env.BASE_URL}portrait.jpg`,
+    []
+  );
+
   return (
     <section className="section section--hero">
       <div className="hero">
@@ -33,7 +38,7 @@ export default function Home() {
 
         <div className="hero__photo-wrapper">
           <img
-            src="/portrait.jpg"
+            src={portraitSrc}
             alt="Ch1m3rical"
             className="hero__photo"
           />
