@@ -551,33 +551,42 @@ a:hover {
   }
 
   .navbar__inner {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
   }
 
   .navbar__brand {
-    justify-content: flex-start;
-    flex: 1 1 auto;
+    justify-content: center;
   }
 
   .navbar__nav {
-    width: auto;
-    flex: 2 1 220px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 0.35rem;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height 0.2s ease, opacity 0.15s ease,
+      transform 0.2s ease;
   }
 
   .navbar__link {
-    flex: 0 0 auto;
-    text-align: left;
+    flex: 1;
+    text-align: center;
   }
 
   .theme-toggle {
-    margin-left: auto;
+    align-self: center;
+    transition: opacity 0.15s ease, transform 0.2s ease;
+  }
+
+  .navbar--collapsed .navbar__nav,
+  .navbar--collapsed .theme-toggle {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-0.35rem);
   }
 
   .hero {
