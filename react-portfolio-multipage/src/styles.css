@@ -627,7 +627,13 @@ a:hover {
   }
 
   .hero {
-    gap: 1.75rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hero__photo-wrapper {
+    order: -1;
+    justify-self: center;
   }
 
   .hero__text {
