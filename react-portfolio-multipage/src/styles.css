@@ -576,10 +576,10 @@ a:hover {
 
   .navbar__nav {
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-top: 0.25rem;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+    padding-top: 0.2rem;
     overflow: hidden;
     max-height: 220px;
     transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
@@ -588,9 +588,12 @@ a:hover {
   }
 
   .navbar__link {
-    flex: 1 1 calc(33.33% - 0.5rem);
+    flex: 1 1 0;
+    min-width: 0;
     text-align: center;
-    padding: 0.35rem 0.5rem;
+    padding: 0.35rem 0.35rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
 
   .theme-toggle {
