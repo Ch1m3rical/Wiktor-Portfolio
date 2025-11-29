@@ -39,13 +39,16 @@ export default function Navbar() {
   return (
     <header className={`navbar${collapsed ? " navbar--collapsed" : ""}`}>
       <div className="navbar__inner">
-        <button
-          className="navbar__brand"
-          onClick={() => navigate("/")}
-        >
-          <span className="navbar__logo">{"<dev/>"}</span>
-          <span className="navbar__name">Ch1m3rical</span>
-        </button>
+        <div className="navbar__top">
+          <button
+            className="navbar__brand"
+            onClick={() => navigate("/")}
+          >
+            <span className="navbar__logo">{"<dev/>"}</span>
+            <span className="navbar__name">Ch1m3rical</span>
+          </button>
+          <ThemeToggle />
+        </div>
 
         <nav className="navbar__nav">
           <NavLink
@@ -73,8 +76,6 @@ export default function Navbar() {
             Contact
           </NavLink>
         </nav>
-
-        <ThemeToggle />
       </div>
     </header>
   );
