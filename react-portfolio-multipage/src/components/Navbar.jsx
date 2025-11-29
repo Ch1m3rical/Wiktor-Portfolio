@@ -50,32 +50,34 @@ export default function Navbar() {
           <ThemeToggle />
         </div>
 
-        <nav className="navbar__nav">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              "navbar__link" + (isActive ? " navbar__link--active" : "")
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              "navbar__link" + (isActive ? " navbar__link--active" : "")
-            }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              "navbar__link" + (isActive ? " navbar__link--active" : "")
-            }
-          >
-            Contact
-          </NavLink>
-        </nav>
+        <div className="navbar__nav-wrapper">
+          <nav className="navbar__nav">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                "navbar__link" + (isActive ? " navbar__link--active" : "")
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                "navbar__link" + (isActive ? " navbar__link--active" : "")
+              }
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                "navbar__link" + (isActive ? " navbar__link--active" : "")
+              }
+            >
+              Contact
+            </NavLink>
+          </nav>
+        </div>
       </div>
     </header>
   );
