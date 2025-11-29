@@ -629,12 +629,13 @@ a:hover {
   .hero {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
+    align-items: flex-start;
   }
 
   .hero__photo-wrapper {
     order: -1;
     justify-self: flex-start;
-    margin-left: 0.25rem;
+    margin-left: 0;
   }
 
   .hero__text {
