@@ -586,14 +586,13 @@ a:hover {
   }
 
   .navbar__nav {
-    width: auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 0.25rem;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    column-gap: 0.35rem;
     padding: 0;
-    margin-top: 0.1rem;
+    margin-top: 0.15rem;
     overflow: hidden;
     max-height: 220px;
     transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
@@ -602,10 +601,9 @@ a:hover {
   }
 
   .navbar__link {
-    flex: 1 1 0;
-    min-width: 0;
+    width: 100%;
     text-align: center;
-    padding: 0.35rem 0.5rem;
+    padding: 0.35rem 0.4rem;
     font-size: 0.85rem;
     white-space: nowrap;
   }
