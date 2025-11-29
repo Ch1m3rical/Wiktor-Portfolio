@@ -634,7 +634,10 @@ a:hover {
 
   .hero__photo-wrapper {
     order: -1;
-    justify-self: flex-start;
+    justify-self: stretch;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
     margin-left: 0;
   }
 
